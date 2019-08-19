@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+def calendarDir = 'Calendar'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        applicationId "com.android.calendar"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'Calendar/proguard.flags'
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest {
+                srcFile "${calendarDir}/AndroidManifest.xml"
+            }
+
+            java {
+                srcDir "${calendarDir}/src"
+            }
+
+            res.srcDirs = ["${calendarDir}/res"]
+        }
+    }
+
+    compileOptions {
+        encoding 'UTF-8'
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+
+    }
+}
+
+dependencies {
+    implementation project(':libchips')
+}

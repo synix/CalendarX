@@ -1,0 +1,6 @@
+[submodule "packages/apps/Calendar"]
+	path = Calendar/Calendar
+	url = https://android.googlesource.com/platform/packages/apps/Calendar
+[submodule "frameworks/opt/chips"]
+	path = libchips/chips
+	url = https://android.googlesource.com/platform/frameworks/opt/chips.git
