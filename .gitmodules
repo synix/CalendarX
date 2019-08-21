@@ -4,3 +4,15 @@
 [submodule "frameworks/opt/chips"]
 	path = libchips/chips
 	url = https://android.googlesource.com/platform/frameworks/opt/chips.git
+[submodule "frameworks/opt/calendar"]
+	path = android_opt_calendar/opt_calendar
+	url = https://android.googlesource.com/platform/frameworks/opt/calendar
+[submodule "frameworks/opt/colorpicker"]
+	path = android_opt_colorpicker/opt_colorpicker
+	url = https://android.googlesource.com/platform/frameworks/opt/colorpicker
+[submodule "frameworks/opt/timezonepicker"]
+	path = android_opt_timezonepicker/opt_timezonepicker
+	url = https://android.googlesource.com/platform/frameworks/opt/timezonepicker
+[submodule "packages/providers/CalendarProvider"]
+	path = CalendarProvider/CalendarProvider
+	url = https://android.googlesource.com/platform/packages/providers/CalendarProvider

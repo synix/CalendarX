@@ -1,0 +1,17 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+    sourceSets {
+        main {
+            def mainDir = 'opt_calendar'
+
+            manifest {
+                srcFile "${mainDir}/AndroidManifest.xml"
+            }
+            java {
+                srcDir "${mainDir}/src"
+            }
+        }
+    }
+}

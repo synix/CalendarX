@@ -5,8 +5,15 @@ def calendarDir = 'Calendar'
 android {
     compileSdkVersion 28
 
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
     defaultConfig {
-        applicationId "com.android.calendar"
+        applicationId "com.android.calendarx"
         minSdkVersion 23
         targetSdkVersion 28
         versionCode 1
@@ -47,5 +54,10 @@ android {
 }
 
 dependencies {
+    implementation project(':android_opt_calendar')
+    implementation project(':android_opt_colorpicker')
+    implementation project(':android_opt_timezonepicker')
     implementation project(':libchips')
+
+    implementation group: 'androidx.legacy', name: 'legacy-support-v4', version: '1.0.0'
 }

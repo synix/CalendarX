@@ -1,3 +1,6 @@
+include ':android_opt_calendar'
+include ':android_opt_colorpicker'
+include ':android_opt_timezonepicker'
 include ':libchips'
 
 include ':Calendar'

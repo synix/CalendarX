@@ -9,6 +9,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Calendar" />
+            <option value="$PROJECT_DIR$/android_opt_calendar" />
+            <option value="$PROJECT_DIR$/android_opt_colorpicker" />
+            <option value="$PROJECT_DIR$/android_opt_timezonepicker" />
             <option value="$PROJECT_DIR$/libchips" />
           </set>
         </option>

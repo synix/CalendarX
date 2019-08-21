@@ -1,0 +1,20 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+    sourceSets {
+        main {
+            def mainDir = 'opt_colorpicker'
+
+            manifest {
+                srcFile "${mainDir}/AndroidManifest.xml"
+            }
+            java {
+                srcDir "${mainDir}/src"
+            }
+            res {
+                srcDir "${mainDir}/res"
+            }
+        }
+    }
+}
