@@ -4,3 +4,4 @@ include ':android_opt_timezonepicker'
 include ':libchips'
 
 include ':Calendar'
+include ':CalendarProvider'

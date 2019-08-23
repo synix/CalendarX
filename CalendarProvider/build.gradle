@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+
+def providerDir = 'CalendarProvider'
+
+android {
+    compileSdkVersion 28
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    defaultConfig {
+        applicationId "com.android.providers.calendar"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'Calendar/proguard.flags'
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest {
+                srcFile "${providerDir}/AndroidManifest.xml"
+            }
+
+            java {
+                srcDir "${providerDir}/src"
+            }
+
+            res.srcDirs = ["${providerDir}/res"]
+        }
+    }
+
+    compileOptions {
+        encoding 'UTF-8'
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+
+    }
+}
+
+dependencies {
+    implementation project(':android_opt_calendar')
+
+    api 'com.google.guava:guava:28.0-android'
+}
